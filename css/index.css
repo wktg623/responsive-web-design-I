@@ -141,7 +141,7 @@ hr{
 	
 }
 
-.feature{
+.flex-container{
 	display: flex;
 	justify-content: space-evenly;
 	width: 95%;
@@ -157,15 +157,10 @@ hr{
 	
 }
 
-.service{
-	display: flex;
-	justify-content: space-evenly;
-	width: 95%;
-	margin-left: 2%;
-}
+
 
 .services{
-	width: 33%;
+	width: 49%;
 	
 	
 }
@@ -191,16 +186,15 @@ footer{
 	
 }
 
+
 .links { 
 	display: flex;
-	justify-content: space-between;
-	position: relative;
+    justify-content: space-between;
+    position: relative;
+	
 }
 
-
-
-
- a{
+a{
 	color:lightslategrey;
 	font-weight: bold; 
 	text-decoration: none;
@@ -210,16 +204,14 @@ footer{
 
 }
 
-.services-header-img{
-	width: 850px;
-	margin-left: 3%;
-	
-}
-
 .q{
 	display: flex;
 	justify-content: space-between;
 }
+
+
+
+
 
 .links img{
 	width: 21%;
@@ -369,29 +361,45 @@ margin-left:40%;
         
     }
 
-    header .links{
+ 
+
+     .links{
         display: flex;
-        
-        flex-wrap: wrap;
         flex-direction: column;
+        flex-wrap: wrap;
+        
+       
         background-color: red;
         align-items: center;
         
     }
 
-.links img{
-    display: flex;
-    align-items: center;
-    background-color: black;
-    align-items: center;
+    .q{
+
+order: 2;
+
+    }
+
+    .great-idea{
+order: 0;
+    }
     
-}
+
+
+    a{
+        margin-left: 9%;
+
+        
+    }
+    
+  
+
 
 .iod{
     flex-direction: row;
     justify-content: center;
     padding: 0;
-    margin-right: 15%;
+    margin-right: 8%;
     
 }
 
@@ -399,9 +407,52 @@ margin-left:40%;
     display: none;
 }
 
+.container{
+    margin: 0 auto;
+    width: 100%;
+}
 
 }
 
-@media screen and (max-width: 500px){
-    .container{background-color: green;}
+
+@media screen and (max-width: 500px){body{
+    margin: 0 auto;
+    padding: 0;
 }
+
+    .container{
+        width: 100%;
+        display: flex;
+        
+    flex-wrap: wrap;
+    flex-basis: auto;
+}
+
+.iod{
+
+    align-content: space-between;
+    vertical-align: middle;
+    width: 100%;
+}
+
+
+.flex-container{
+    display: flex;
+    align-items: space-evenly;
+    flex-direction: column; 
+    width: 100%;
+    margin-right: 2%;
+   
+}
+
+.features{width: 100%;}
+.services{width: 100%;}
+
+.middle-img{
+    width: 100%;
+}
+
+
+
+}
+
