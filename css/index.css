@@ -74,12 +74,63 @@ p{
 }
 .container{
 	margin: 0 auto;
-	width: 900px;
+	width: 800px;
 	
 
 	
 }
+body nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80px;
+    margin: 30px 0;
+  }
+   body nav a {
+    color: grey;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
 
+  }
+  
+  /*
+  - align header so that it's horizontal
+  Note: You may notice I don't adjust the width sometimes. That's because I looked to see if that's necessary first by adding "border: 1px solid red;" to the element. If it naturally takes the full width, it's not necessary to tell it to.
+  */
+  header {
+    display: flex;
+    margin-bottom: 30px;
+  }
+  
+  /* - Adjust the spacing around the "Innovation on Demand" and "Get Started" elements. */
+  header section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  /* - Style the "Innovation On Demand" text */
+  header section h1 {
+    font-size: 48px;
+  }
+  
+  /* - Style the "Get Started" button */
+  header section button {
+    background: white;
+    width: 50%;
+    height: 32px;
+    font-size: 18px;
+    border: 1px solid black;
+  }
+  
+  /* - Style the round code picture */
+  header img {
+    width: 50%;
+  }
 
 
 
@@ -183,41 +234,6 @@ footer{
 	
 	
 	
-	
-}
-
-
-.links { 
-	display: flex;
-    justify-content: space-between;
-    position: relative;
-	
-}
-
-a{
-	color:lightslategrey;
-	font-weight: bold; 
-	text-decoration: none;
-	margin-left: 9%;
-	margin: 6%;
-	padding: 2%;
-
-}
-
-.q{
-	display: flex;
-	justify-content: space-between;
-}
-
-
-
-
-
-.links img{
-	width: 21%;
-	height: 40%;
-	position: absolute;
-	bottom: 27px; right: 0;
 	
 }
 
@@ -361,37 +377,26 @@ margin-left:40%;
         
     }
 
- 
+ header section{
+     flex-wrap: wrap;
+  
+  margin-left: 25%; 
+ }
 
-     .links{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        
+    nav {
+        display: flex; 
+        flex-direction: column-reverse;
        
-        background-color: red;
-        align-items: center;
         
     }
 
-    .q{
+     nav a{
+       
+       align-self: flex-end;
+       
+   }
 
-order: 2;
-
-    }
-
-    .great-idea{
-order: 0;
-    }
-    
-
-
-    a{
-        margin-left: 9%;
-
-        
-    }
-    
+   
   
 
 
@@ -403,14 +408,11 @@ order: 0;
     
 }
 
-.img{
+header img{
     display: none;
 }
 
-.container{
-    margin: 0 auto;
-    width: 100%;
-}
+
 
 }
 
@@ -428,7 +430,19 @@ order: 0;
     flex-basis: auto;
 }
 
-.iod{
+nav{
+    flex-direction: column-reverse;
+    align-content: space-between;
+    width: 100%;
+
+}
+
+nav a{
+    border-bottom: 1px solid black;
+    align-self: auto;
+}
+
+header{
 
     align-content: space-between;
     vertical-align: middle;
