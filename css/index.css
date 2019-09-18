@@ -86,14 +86,18 @@ body nav {
     height: 80px;
     margin: 30px 0;
   }
-   body nav a {
-    color: grey;
+   body nav .a {
+   
     width: 100%;
     display: flex;
-    text-decoration: none;
+    justify-content: space-evenly;
 
   }
   
+  body nav a{
+	  text-decoration: none;
+	  color: grey;
+  }
   /*
   - align header so that it's horizontal
   Note: You may notice I don't adjust the width sometimes. That's because I looked to see if that's necessary first by adding "border: 1px solid red;" to the element. If it naturally takes the full width, it's not necessary to tell it to.
@@ -124,7 +128,8 @@ body nav {
     width: 50%;
     height: 32px;
     font-size: 18px;
-    border: 1px solid black;
+	border: 1px solid black;
+	border-radius: 0px;
   }
   
   /* - Style the round code picture */
@@ -174,12 +179,14 @@ body nav {
 	background-color: white;
 	border: 1px solid black;
 	font-size: 19px;
-	border-radius: 0px;
+	
 	
 
 	
 	
 }
+
+
 
 .middle-img{
 width: 94%;
@@ -197,13 +204,13 @@ hr{
 	justify-content: space-evenly;
 	width: 95%;
 	margin-left: 2%;
+	
 }
 
 .features{
 	
-	
 	width: 49%;
-	
+	padding-right: 2%;
 	
 	
 }
@@ -212,7 +219,7 @@ hr{
 
 .services{
 	width: 49%;
-	
+	padding-right: 2%;
 	
 }
 
@@ -375,29 +382,35 @@ margin-left:40%;
     .container{
         width: 100%;
         
-    }
+	}
+	
+	
 
+    body nav{
+		display: flex;
+		flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+	}
+	
+	body nav .a{
+		order: 1;
+	}
+
+	body nav .logo{
+		order: 0;
+		padding-bottom: 5%;
+		margin-left: 7%;
+	}
+   
  header section{
      flex-wrap: wrap;
   
   margin-left: 25%; 
+  padding-bottom: 5%;
  }
 
-    nav {
-        display: flex; 
-        flex-direction: column-reverse;
-       
-        
-    }
-
-     nav a{
-       
-       align-self: flex-end;
-       
-   }
-
-   
-  
+ 
 
 
 .iod{
@@ -422,24 +435,33 @@ header img{
     padding: 0;
 }
 
-    .container{
-        width: 100%;
-        display: flex;
-        
-    flex-wrap: wrap;
-    flex-basis: auto;
+    body nav{
+		display: flex;
+		flex-direction: column;
+	}
+
+
+body nav .a{
+	display: flex;
+	flex-direction: column;
+	border-top: 1px solid black;
+	
+	
+
+}
+body nav a{
+	border-bottom: 1px solid black;
+	padding-left: 45%;
+	color: gray;
+	font-size: 20px;
+}
+body nav .logo{
+	margin-top: 10%;
 }
 
-nav{
-    flex-direction: column-reverse;
-    align-content: space-between;
-    width: 100%;
-
-}
-
-nav a{
-    border-bottom: 1px solid black;
-    align-self: auto;
+header section{
+	padding-top: 15%;
+	
 }
 
 header{
@@ -447,13 +469,14 @@ header{
     align-content: space-between;
     vertical-align: middle;
     width: 100%;
+
 }
 
 
 .flex-container{
     display: flex;
     align-items: space-evenly;
-    flex-direction: column; 
+    flex-direction: column;
     width: 100%;
     margin-right: 2%;
    
