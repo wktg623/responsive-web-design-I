@@ -1,6 +1,3 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
-
-
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -73,75 +70,23 @@ p{
 	
 }
 .container{
+    display: flex;
+    flex-direction: column;
+
 	margin: 0 auto;
-	width: 800px;
+	width: 100%;
 	
 
 	
 }
-body nav {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 80px;
-    margin: 30px 0;
-  }
-   body nav .a {
-   
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
 
-  }
-  
-  body nav a{
-	  text-decoration: none;
-	  color: grey;
-  }
-  /*
-  - align header so that it's horizontal
-  Note: You may notice I don't adjust the width sometimes. That's because I looked to see if that's necessary first by adding "border: 1px solid red;" to the element. If it naturally takes the full width, it's not necessary to tell it to.
-  */
-  header {
-    display: flex;
-    margin-bottom: 30px;
-  }
-  
-  /* - Adjust the spacing around the "Innovation on Demand" and "Get Started" elements. */
-  header section {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  /* - Style the "Innovation On Demand" text */
-  header section h1 {
-    font-size: 48px;
-  }
-  
-  /* - Style the "Get Started" button */
-  header section button {
-    background: white;
-    width: 50%;
-    height: 32px;
-    font-size: 18px;
-	border: 1px solid black;
-	border-radius: 0px;
-  }
-  
-  /* - Style the round code picture */
-  header img {
-    width: 50%;
-  }
 
 
 
 	
 .main{
-	display: flex;
+    display: flex;
+    flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: space-evenly;
 	margin: 0 auto;
@@ -179,14 +124,12 @@ body nav {
 	background-color: white;
 	border: 1px solid black;
 	font-size: 19px;
-	
+	border-radius: 0px;
 	
 
 	
 	
 }
-
-
 
 .middle-img{
 width: 94%;
@@ -199,32 +142,37 @@ hr{
 	
 }
 
-.flex-container{
+.feature{
 	display: flex;
 	justify-content: space-evenly;
 	width: 95%;
 	margin-left: 2%;
-	
 }
 
 .features{
 	
+	
 	width: 49%;
-	padding-right: 2%;
+	
 	
 	
 }
 
-
+.service{
+	display: flex;
+	justify-content: space-evenly;
+	width: 95%;
+	margin-left: 2%;
+}
 
 .services{
-	width: 49%;
-	padding-right: 2%;
+	width: 33%;
+	
 	
 }
 
 .contact{
-	margin-left: 2%;
+	text-align: left;
 	margin-top: 5%;
 }
 
@@ -237,14 +185,52 @@ footer{
 
 .container2{
 	margin: 0 auto;
-	width: 900px;
+	width: 98%;
 	
 	
 	
 	
 }
 
+  
 
+.links { 
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+
+
+ a{
+	color:lightslategrey;
+	font-weight: bold; 
+	text-decoration: none;
+	margin-left: 9%;
+	margin: 6%;
+	padding: 2%;
+
+}
+
+.services-header-img{
+	width: 850px;
+	margin-left: 3%;
+	
+}
+
+.q{
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+.links img{
+	width: 21%;
+	height: 40%;
+	position: absolute;
+	bottom: 27px; right: 0;
+	
+}
 
 
 .first{
@@ -317,7 +303,7 @@ hr{
 .product-image1{
 	
 	width: 48%;
-	padding-right:
+	
 	float: left;
 	margin-left: 1%;
 	border: 5px solid black;
@@ -371,125 +357,101 @@ margin-left:40%;
 	  border-top: 40px solid black;
 	  margin-left: 40%;
 		}
+/***Media Queries***/
 
-@media screen and (max-width: 800px){
-
-    body{
-        margin: 0 auto;
-        padding: 0;
-    }
-
-    .container{
-        width: 100%;
-        
-	}
-	
-	
-
-    body nav{
-		display: flex;
-		flex-direction: column;
-        justify-content: space-evenly;
-        width: 100%;
-	}
-	
-	body nav .a{
-		order: 1;
-	}
-
-	body nav .logo{
-		order: 0;
-		padding-bottom: 5%;
-		margin-left: 7%;
-	}
-   
- header section{
-     flex-wrap: wrap;
+@media screen and (max-width: 800px)
+{
+  body{
+    margin: 0;
+    padding: 0;
+  }
   
-  margin-left: 25%; 
-  padding-bottom: 5%;
- }
-
- 
-
-
-.iod{
-    flex-direction: row;
-    justify-content: center;
-    padding: 0;
-    margin-right: 8%;
-    
-}
-
-header img{
-    display: none;
-}
-
-
-
-}
-
-
-@media screen and (max-width: 500px){body{
-    margin: 0 auto;
-    padding: 0;
-}
-
-    body nav{
-		display: flex;
-		flex-direction: column;
-	}
-
-
-body nav .a{
-	display: flex;
-	flex-direction: column;
-	border-top: 1px solid black;
-	
-	
-
-}
-body nav a{
-	border-bottom: 1px solid black;
-	padding-left: 45%;
-	color: gray;
-	font-size: 20px;
-}
-body nav .logo{
-	margin-top: 10%;
-}
-
-header section{
-	padding-top: 15%;
-	
-}
-
-header{
-
-    align-content: space-between;
-    vertical-align: middle;
-    width: 100%;
-
-}
-
-
-.flex-container{
+  .container2{
+    width: 95%;
     display: flex;
-    align-items: space-evenly;
     flex-direction: column;
-    width: 100%;
-    margin-right: 2%;
+    
+  }
+  
+  .links{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .links img {
+    order: 0;
+    margin-right: 39%;
+    margin-bottom: 6%;
+    
+  }
+  
+  .links .q{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    order: 1;
+   width: 45%;
+    padding-top: 11%;
+    margin-left: 28%;
+    
+    
+  }
+  
+  
+  .services-header-img{
+    width: 95%;
+  }
+  
+  .last-box{
    
-}
-
-.features{width: 100%;}
-.services{width: 100%;}
-
-.middle-img{
+    width: 95%;
+  }
+  
+  
+  
+  .first img {
+    width: 48%;
+    height: 78%;
+    padding-left: 3%;
+    
+  }
+@media screen and (max-width: 500px){body{
+  
+  margin: 0;
+  padding: 0;
+  
+  
+  }  
+  
+  
+  .container2{
     width: 100%;
-}
-
-
-
-}
-
+    display: flex;
+    
+    flex-wrap: wrap;
+  }
+  
+  .links .q {
+  display: flex;
+    width: 30%;
+    margin-bottom: 5%;
+    font-size: 90%;
+    padding-left: 13%;
+ 
+      
+  }
+  
+  header .links img{
+    padding-bottom: 3%;
+      
+  }
+  
+  .services-header-img {
+    width: 95%;
+  }
+  .first{
+    display: flex;
+    flex-direction: column;
+  } 
+}}
